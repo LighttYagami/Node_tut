@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // Add active class to the current pill
+      var url = window.location;
+      $('ul.nav-pills a[href="' + url + '"]').addClass('active');
+      // Add active class to the parent pill of the current pill
+      $('ul.nav-pills a').filter(function () {
+        return this.href == url;
+      }).parent().addClass('active');
+    });
+  </script>
+</head>
+
+<body>
+    <div class="cointainer-fluid mt-5">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+
+                <nav id="navbar-example2" class="navbar navbar-expand-lg navbar-light bg-light mx-auto w-75 fixed-top">
+                    <div class="container-fluid mx-3">
+                        <a class="navbar-brand" href="#">Navbar</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav ms-auto mb-2 mb-lg-0 mx-1 ">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#scrollspyHeading1">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#scrollspyHeading2">Services</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#scrollspyHeading3">Contact Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#scrollspyHeading4">About Us</a>
+                                </li>
+                                <button type="button" class="btn btn-outline-info ms-5 me-3">Log In</button>
+                                <button type="button" class="btn btn-warning">Sign Up</button>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <script>
+    $(function () {
+      $('body').scrollspy({ target: '#navbar-example2' });
+    });
+  </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

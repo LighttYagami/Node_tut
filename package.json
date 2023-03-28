@@ -1,0 +1,20 @@
+{
+  "name": "project",
+  "version": "1.0.0",
+  "description": "bootstrap5 node.js mongodb mongoose",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon src/app.js -e js,hbs"
+  },
+  "author": "Shwetank",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "jquery": "^3.6.4",
+    "mongoose": "^7.0.2",
+    "validator": "^13.9.0"
+  }
+}
